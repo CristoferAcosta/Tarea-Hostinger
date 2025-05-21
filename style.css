@@ -24,9 +24,42 @@
     font-size: 16px;
     font-weight: 400;
 }
+.text-big{
+    font-size: 20px;
+    font-weight: 700;
+}
+.text-color-different{
+    color: var(--violet-500);
+}
 .mt{
     margin-top: 24px;
 }
+.mtsmall{
+    margin-top: 8px;
+}
+
+/*Hero*/
+
+.header-hero{
+    color: var(--violet-600);
+    padding: 36px 40px 96px;
+    margin: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.header-hero-left{
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    height: 400px;
+    width: 400px;
+}
+/*Migracion*/
+
 .section-services{
     background: var(--violet-700);
     color: var(--white-text);
