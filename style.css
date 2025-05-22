@@ -5,6 +5,7 @@
     --violet-600:#2f1c6a;
     --violet-500:#673de6;
     --white-text:#ffff;
+    --color-counter:#e2dbfc;
 }
 *{
     padding: 0;
@@ -26,13 +27,22 @@
 }
 .text-big{
     font-size: 20px;
+}
+.num-big{
+    font-size: 48px;
     font-weight: 700;
 }
 .text-color-different{
     color: var(--violet-500);
 }
+.fw{
+    font-weight: 700;
+}
 .mt{
     margin-top: 24px;
+}
+.mb{
+    margin-bottom: 24px;
 }
 .mtsmall{
     margin-top: 8px;
@@ -43,7 +53,7 @@
 .header-hero{
     color: var(--violet-600);
     padding: 36px 40px 96px;
-    margin: 0 40px;
+    margin: 0 28px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,11 +62,63 @@
 .header-hero-left{
     display: flex;
     flex-direction: column;
+    text-align: start;
+    max-width: 600px;
+    padding: 0;
 }
-
-img{
-    height: 400px;
-    width: 400px;
+.hero-left__header{
+    margin: 0 0 24px;
+}
+.hero-left__list{
+    display: flex;
+    flex-direction: column;
+    font-weight: 400px;
+}
+.hero-left__list__items{
+    display: flex;
+    gap: 10px;
+    margin: 0 2px;
+}
+.hero-left__list__icons-check{
+    font-size: 22px;
+    color: #40c4ac;
+}
+.hero-left__list__icons-question{
+    font-size: 13px;
+}
+.hero-left__buttons{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 28px 0 15px;
+}
+.primary-button{
+    background: var(--violet-500);
+    color: var(--white-text);
+    padding: 12px 48px;
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 8px;
+}
+.counter-time{
+    background: var(--color-counter);
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-weight: 700;
+    min-width: 160px
+}
+.check-garant{
+    font-weight: 400;
+}
+.header-hero-right{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    max-width: 1024px;
+}
+.header-hero-rigth img{
+    width: 100%;
 }
 /*Migracion*/
 
