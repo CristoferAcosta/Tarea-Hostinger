@@ -7,6 +7,8 @@
     --violet-500: #673de6;
     --white-text: #ffff;
     --color-counter: #e2dbfc;
+    --color-footer: #f4f5ff;
+    --color-header: #1d1e20;
 }
 
 * {
@@ -61,11 +63,78 @@
     margin-top: 8px;
 }
 
+/*Header*/
+
+header{
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 4px 10px #0000001a; 
+    background-color: var(--white-text);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: sticky ;
+    transition: box-shadow 0.3s ease;
+}
+.logo-header{
+    padding: 29px 0 29px 40px;
+}
+.nav-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 40px;
+}
+.nav-left{
+    display: flex;
+    gap: 32px;
+}
+.nav-left a{
+    text-decoration: none;
+    color: var(--color-header);
+    font-size: 16px;
+    font-weight: 300;
+}
+.arrow-size{
+    font-size: 14px;
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.nav-local a{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-header);
+}
+.nav-local img{
+    height: 20px;
+    width: 32px;
+}
+.button-login a{
+    text-decoration: none;
+    color: var(--color-header);
+    font-weight: 700;
+    padding: 12px 16px;
+    border: 2px solid;
+    border-radius: 8px;
+}
+.header-list{
+    display: none;
+}
+
 /*Hero*/
 
-.header-hero {
+.section-hero {
     color: var(--violet-600);
     padding: 36px 40px 96px;
+    max-width: 1208px;
     margin: 0 auto;
     width: 100%;
     display: flex;
@@ -74,7 +143,7 @@
     gap: 8px;
 }
 
-.header-hero-left {
+.section-hero-left {
     display: flex;
     flex-direction: column;
     text-align: start;
@@ -137,16 +206,17 @@
     font-weight: 400;
 }
 
-.header-hero-right {
+.section-hero-right {
     display: flex;
     align-items: center;
     justify-content: end;
-    max-width: 550px;
+    max-width: 580px;
 }
 
-.header-hero-right img {
+.section-hero-right img {
     width: 100%;
     height: auto;
+    position: relative;
 }
 
 /*Section: Migración*/
@@ -206,8 +276,125 @@
     border-radius: 8px;
 }
 
+/* Footer */
+
+.logo{
+    height: 30px;
+    width: 147px;
+}
+footer{
+    background-color: var(--color-footer);
+    padding: 0 40px;
+    color: var(--violet-600);
+}
+.footer-section{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 auto;
+    max-width: 1208px;
+}
+.logo-redes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+.redes{
+    display: flex;
+    gap: 16px;
+    font-size: 20px;
+    color: var(--white-text);
+}
+.redes-icono{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--violet-600);
+    height: 32px;
+    width: 32px;
+    border-radius: 8px;
+}
+.payment-method-terms{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+.payment-method{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.payment-method img{
+    height: 40px;
+    width: 60px;
+    background-color: var(--white-text);
+    border-radius: 5px;
+}
+.payment-method a{
+    text-decoration: none;
+    color: var(--violet-500);
+    font-weight: 700;
+}
+.terms{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 445px;
+    gap: 16px;
+}
+.terms a{
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--violet-600);
+}
+.line{
+    border-bottom: 1px solid var(--color-footer);
+    margin: 0 auto;
+    max-width: 1208px;
+}
+.footer-copyright{
+    padding: 24px 0;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1208px;
+}
+
 /* Media Queries */
 
+@media screen and (min-width: 1280px){
+    .section-hero{
+        padding: 36px 80px 96px;
+        max-width: 1472px;
+    }
+    .section-hero-right{
+        max-width: 700px;
+    }
+}
+@media screen and (max-width:1139px) {
+    header{
+        justify-content: space-between;
+    }
+    .logo-header{
+        padding: 16px 0 16px 20px;
+    }
+    .nav-header{
+        display: none;
+    }
+    .header-list{
+        position: absolute;
+        display: inline;
+        font-size: 25px;
+        right: 16px;
+        top: 16px;
+    }
+}
 @media screen and (max-width: 1024px) {
     .title-medium {
         font-size: 28px;
@@ -218,14 +405,14 @@
     .num-big{
         font-size: 40px;
     }
-    .header-hero{
+    .section-hero{
         flex-direction: column;
         justify-content: center;
         margin: 0 auto;
         padding: 62px 40px 80px;
         max-width: 768px;
     }
-    .header-hero-right{
+    .section-hero-right{
         max-width: 688px;
     }
     .section-services {
@@ -242,14 +429,42 @@
         margin: 0 auto;
         max-width: 768px;
     }
+    .footer-section{
+        margin: 0 auto;
+        max-width: 768px;
+    }
+    .payment-method-terms{
+        flex-direction: column-reverse;
+        align-items: start;
+        gap: 16px;
+    }
+    .footer-copyright{
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 768px;
+        gap: 16px;
+    }
+    .line{
+        margin: 0 auto;
+        max-width: 768px;
+    }
 }
 @media screen and (max-width: 768px) {
-    .header-hero{
+    .mb{
+        margin-bottom: 16px;
+    }
+    .title-medium{
+        font-size: 24px;
+    }
+    .section-hero{
         padding: 14px 16px 36px;
     }
-    .header-hero-right{
+    .section-hero-right{
         max-width: 508px;
         width: 100%;
+    }
+    .hero-left__header{
+        margin: 0 0 16px;
     }
     .hero-left__buttons{
         flex-direction: column-reverse;
@@ -264,5 +479,36 @@
     }
     .counter-time{
         width: 100%;
+    }
+    footer{
+        padding: 0 16px;
+    }
+    .footer-section{
+        max-width: 508px;
+    }
+    .logo-redes{
+        flex-direction: column-reverse;
+        align-items: start;
+        gap: 16px;
+    }
+    .redes{
+        width: 100%;
+        justify-content: space-between;
+        margin: 0 0 8px;
+        padding: 16px 0;
+    }
+    .terms{
+        flex-wrap: wrap;
+        min-width: 328px;
+    }
+    .payment-method{
+        max-width: 300px;
+    }
+    .footer-copyright{
+        max-width: 508px;
+    }
+    .line{
+        margin: 0 auto;
+        max-width: 508px;
     }
 }
